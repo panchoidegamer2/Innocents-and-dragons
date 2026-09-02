@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://dldw33k17wgpb"]
+
+[ext_resource type="Script" uid="uid://bqej5i0remsg6" path="res://scripts/nube.gd" id="1_c0gxb"]
+[ext_resource type="Texture2D" uid="uid://b8rodjrgen8pg" path="res://assets/nube.png" id="1_o0tkm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vivx3"]
+size = Vector2(28, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c0gxb"]
+atlas = ExtResource("1_o0tkm")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k3tv6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c0gxb")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="nube" type="Area2D" unique_id=443288460]
+script = ExtResource("1_c0gxb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=870137776]
+position = Vector2(0, 3.5)
+shape = SubResource("RectangleShape2D_vivx3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=270350435]
+sprite_frames = SubResource("SpriteFrames_k3tv6")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
