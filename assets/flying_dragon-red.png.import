@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8rodjrgen8pg"
-path="res://.godot/imported/nube.png-e86a50d9d818ef2a3b761d32775ed5f4.ctex"
+uid="uid://b4fdo1ugt4c5r"
+path="res://.godot/imported/flying_dragon-red.png-8e19a221b839bcfdfe61f32626df8b77.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/nube.png"
-dest_files=["res://.godot/imported/nube.png-e86a50d9d818ef2a3b761d32775ed5f4.ctex"]
+source_file="res://assets/flying_dragon-red.png"
+dest_files=["res://.godot/imported/flying_dragon-red.png-8e19a221b839bcfdfe61f32626df8b77.ctex"]
 
 [params]
 

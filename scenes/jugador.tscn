@@ -1,14 +1,26 @@
 [gd_scene format=3 uid="uid://bqo2wna0wo5r4"]
 
-[ext_resource type="Texture2D" uid="uid://dops6fmwnf0t5" path="res://assets/icon.svg" id="1_g87hm"]
 [ext_resource type="Script" uid="uid://ns55yxq844f" path="res://scripts/jugador.gd" id="1_lhlt4"]
+[ext_resource type="Texture2D" uid="uid://b4fdo1ugt4c5r" path="res://assets/flying_dragon-red.png" id="2_lhlt4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vivx3"]
-size = Vector2(130, 130)
+size = Vector2(96, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lhlt4"]
-atlas = ExtResource("1_g87hm")
-region = Rect2(0, 0, 128, 128)
+atlas = ExtResource("2_lhlt4")
+region = Rect2(382, 161, 191, 161)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k64kw"]
+atlas = ExtResource("2_lhlt4")
+region = Rect2(191, 161, 191, 161)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_28edd"]
+atlas = ExtResource("2_lhlt4")
+region = Rect2(0, 161, 191, 161)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qimn5"]
+atlas = ExtResource("2_lhlt4")
+region = Rect2(382, 161, 191, 161)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yqjtg"]
 animations = [{
@@ -17,15 +29,35 @@ animations = [{
 "texture": SubResource("AtlasTexture_lhlt4")
 }],
 "loop": 1,
-"name": &"default",
+"name": &"idle",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k64kw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_28edd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k64kw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qimn5")
+}],
+"loop": 0,
+"name": &"vuelo",
+"speed": 10.0
 }]
 
 [node name="jugador" type="CharacterBody2D" unique_id=1574151228]
 script = ExtResource("1_lhlt4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=68890744]
+position = Vector2(-4, 6.5)
 shape = SubResource("RectangleShape2D_vivx3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=607887459]
 sprite_frames = SubResource("SpriteFrames_yqjtg")
+animation = &"vuelo"
+autoplay = "idle"

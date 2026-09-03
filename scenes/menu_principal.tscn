@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://qrbi6aiei13l"]
+
+[ext_resource type="Script" uid="uid://cp38xyvf5itgb" path="res://scripts/menu_principal.gd" id="1_i85hu"]
+
+[node name="TextureRect" type="TextureRect" unique_id=1201985512]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1036614617]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 201.0
+offset_right = 479.0
+offset_bottom = 302.0
+alignment = 1
+script = ExtResource("1_i85hu")
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=1370846651]
+layout_mode = 2
+text = "Iniciar juego"
+
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=1384658527]
+layout_mode = 2
+text = "Salir"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="VBoxContainer" method="boton1"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="VBoxContainer" method="boton3"]
