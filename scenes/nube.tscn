@@ -23,6 +23,7 @@ animations = [{
 
 [node name="nube" type="Area2D" unique_id=443288460]
 script = ExtResource("1_c0gxb")
+velocidad_nube = 500
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=870137776]
 position = Vector2(0, 3.5)
@@ -31,4 +32,7 @@ shape = SubResource("RectangleShape2D_vivx3")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=270350435]
 sprite_frames = SubResource("SpriteFrames_k3tv6")
 
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1330028607]
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
