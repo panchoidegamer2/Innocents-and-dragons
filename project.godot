@@ -19,6 +19,7 @@ config/icon="res://assets/icon.svg"
 [autoload]
 
 Global="*uid://nejd6tqyh8gr"
+Guardar="*uid://cghc52p1p0hqb"
 
 [debug]
 

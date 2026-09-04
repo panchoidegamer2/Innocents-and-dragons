@@ -16,7 +16,14 @@ func _process(delta: float) -> void:
 		Global.racha += 1
 		rayo_arriba.enabled = false
 		rayo_abajo.enabled = false
+		if Global.puntos > Global.mejor_puntaje:
+			Global.mejor_puntaje = Global.puntos
+		if Global.racha > Global.mejor_racha:
+			Global.mejor_racha = Global.racha
+		print("mejor puntaje: " + str(Global.mejor_puntaje))
+		print("mejor racha: " + str(Global.mejor_racha))
 
+		
 func _on_body_entered(_body: Node2D) -> void:
 	if nube.animation == "nube normal":
 		#cuando un cuerpo entra en la nube baja la velocidad y empieza el timer

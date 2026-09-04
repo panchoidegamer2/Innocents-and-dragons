@@ -8,10 +8,10 @@ offset_bottom = 40.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1036614617]
 layout_mode = 0
-offset_left = 376.0
-offset_top = 201.0
-offset_right = 479.0
-offset_bottom = 302.0
+offset_left = 630.0
+offset_top = 247.0
+offset_right = 736.0594
+offset_bottom = 351.0
 alignment = 1
 script = ExtResource("1_i85hu")
 
@@ -22,6 +22,30 @@ text = "Iniciar juego"
 [node name="Button3" type="Button" parent="VBoxContainer" unique_id=1384658527]
 layout_mode = 2
 text = "Salir"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=2023222654]
+layout_mode = 0
+offset_left = 171.0
+offset_top = 205.0
+offset_right = 314.0
+offset_bottom = 253.0
+text = "(aca va un dibujo de un dragon)"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1842599563]
+layout_mode = 0
+offset_left = 504.0
+offset_top = 124.0
+offset_right = 842.0
+offset_bottom = 226.0
+alignment = 1
+
+[node name="mejor puntaje" type="Label" parent="HBoxContainer" unique_id=475474135]
+layout_mode = 2
+text = "Mejor puntaje: 0"
+
+[node name="mejor racha" type="Label" parent="HBoxContainer" unique_id=1272043527]
+layout_mode = 2
+text = "Mejor racha: 0"
 
 [connection signal="pressed" from="VBoxContainer/Button" to="VBoxContainer" method="boton1"]
 [connection signal="pressed" from="VBoxContainer/Button3" to="VBoxContainer" method="boton3"]
