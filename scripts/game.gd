@@ -22,7 +22,6 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("volar") and get_tree().paused == true:
 		get_tree().paused = false
 		timer.start()
-		print("despausa")
 	puntos.text = "Puntos: " + str(Global.puntos)
 	racha.text = "Racha:" + str(Global.racha)
 

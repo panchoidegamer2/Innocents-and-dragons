@@ -2,6 +2,13 @@
 
 [ext_resource type="Script" uid="uid://cp38xyvf5itgb" path="res://scripts/menu_principal.gd" id="1_i85hu"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k3tv6"]
+bg_color = Color(0.078431375, 0.08627451, 0.11764706, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 1
+
 [node name="TextureRect" type="TextureRect" unique_id=1201985512]
 offset_right = 40.0
 offset_bottom = 40.0
@@ -31,19 +38,23 @@ offset_right = 314.0
 offset_bottom = 253.0
 text = "(aca va un dibujo de un dragon)"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1842599563]
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1827196448]
 layout_mode = 0
-offset_left = 504.0
-offset_top = 124.0
-offset_right = 842.0
-offset_bottom = 226.0
-alignment = 1
+offset_left = 562.0
+offset_top = 131.0
+offset_right = 804.0
+offset_bottom = 171.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_k3tv6")
 
-[node name="mejor puntaje" type="Label" parent="HBoxContainer" unique_id=475474135]
+[node name="HBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=210381055]
+layout_mode = 2
+accessibility_region = true
+
+[node name="mejor puntaje" type="Label" parent="PanelContainer/HBoxContainer" unique_id=475474135]
 layout_mode = 2
 text = "Mejor puntaje: 0"
 
-[node name="mejor racha" type="Label" parent="HBoxContainer" unique_id=1272043527]
+[node name="mejor racha" type="Label" parent="PanelContainer/HBoxContainer" unique_id=1272043527]
 layout_mode = 2
 text = "Mejor racha: 0"
 

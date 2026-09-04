@@ -16,12 +16,10 @@ func _process(delta: float) -> void:
 		Global.racha += 1
 		rayo_arriba.enabled = false
 		rayo_abajo.enabled = false
-		if Global.puntos > Global.mejor_puntaje:
-			Global.mejor_puntaje = Global.puntos
-		if Global.racha > Global.mejor_racha:
-			Global.mejor_racha = Global.racha
-		print("mejor puntaje: " + str(Global.mejor_puntaje))
-		print("mejor racha: " + str(Global.mejor_racha))
+		if Global.puntos > Guardar.mejor_puntaje:
+			Guardar.mejor_puntaje = Global.puntos
+		if Global.racha > Guardar.mejor_racha:
+			Guardar.mejor_racha = Global.racha
 
 		
 func _on_body_entered(_body: Node2D) -> void:
