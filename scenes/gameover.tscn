@@ -1,26 +1,55 @@
 [gd_scene format=3 uid="uid://0p7rwcsvaudk"]
 
-[node name="PanelContainer" type="PanelContainer" unique_id=1627635531]
+[ext_resource type="Script" uid="uid://bjm3ttw662ibj" path="res://scripts/gameover.gd" id="1_ncp31"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k3tv6"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+
+[sub_resource type="LabelSettings" id="LabelSettings_vivx3"]
+
+[node name="Node" type="Node" unique_id=1440133414]
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1627635531]
 propagate_maximum_size = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -56.5
-offset_top = -33.0
-offset_right = 56.5
-offset_bottom = 33.0
+offset_left = -72.0
+offset_top = -18.0
+offset_right = 41.0
+offset_bottom = 48.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ncp31")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1078224250]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1078224250]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="VBoxContainer" unique_id=1321125640]
+[node name="Button" type="Button" parent="PanelContainer/VBoxContainer" unique_id=1321125640]
 layout_mode = 2
 text = "volver a jugar"
 
-[node name="Button2" type="Button" parent="VBoxContainer" unique_id=427224662]
+[node name="Button2" type="Button" parent="PanelContainer/VBoxContainer" unique_id=427224662]
 layout_mode = 2
 text = "salir al menu"
+
+[node name="PanelContainer2" type="PanelContainer" parent="." unique_id=2059815576]
+offset_left = 402.0
+offset_top = 154.0
+offset_right = 466.0
+offset_bottom = 194.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_k3tv6")
+
+[node name="Label" type="Label" parent="PanelContainer2" unique_id=863700404]
+layout_mode = 2
+text = "Perdiste"
+label_settings = SubResource("LabelSettings_vivx3")
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Button" to="PanelContainer" method="boton1"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Button2" to="PanelContainer" method="boton2"]
